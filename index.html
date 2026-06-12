@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sthefany Baron | Consultoria de marketing para pequenos negócios</title>
+<meta name="description" content="Consultoria, mentoria e gestão parcial de conteúdo para pequenos negócios e profissionais liberais. Presença digital sem complicação, desde 2017.">
+<meta property="og:title" content="Sthefany Baron | Consultoria de marketing">
+<meta property="og:description" content="Presença digital sem complicação: consultoria, mentoria e gestão parcial de conteúdo para pequenos negócios.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F9D9C5'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='32' text-anchor='middle' fill='%23141414'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFEFC;
+    --ink:#141414;
+    --ink-soft:#5C5752;
+    --blush:#F9D9C5;
+    --blush-soft:#FCEFE5;
+    --line:#EAE2D9;
+    --radius:18px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Montserrat',system-ui,-apple-system,Segoe UI,sans-serif;
+    font-size:1.02rem;line-height:1.7;
+    color:var(--ink);background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--blush);color:var(--ink)}
+  a{color:var(--ink);text-decoration-color:var(--blush);text-decoration-thickness:2px;text-underline-offset:4px}
+  a:hover{text-decoration-color:var(--ink)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+  svg{display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+  .section{padding:92px 0;position:relative}
+  .display{font-family:'Julius Sans One','Montserrat',sans-serif;text-transform:uppercase;font-weight:400}
+  .label{
+    font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .label b{color:var(--ink);font-weight:600}
+  .h2{font-size:clamp(1.45rem,3.2vw,2.05rem);line-height:1.18;letter-spacing:.03em;margin:12px 0 10px}
+  .lead{color:var(--ink-soft);max-width:58ch}
+
+  /* ---------- decoracao organica ---------- */
+  .deco{position:absolute;pointer-events:none;z-index:0}
+
+  /* ---------- topo ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--paper) 90%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{
+    font-family:'Julius Sans One',sans-serif;text-transform:uppercase;
+    font-size:1.02rem;letter-spacing:.14em;color:var(--ink);text-decoration:none;
+  }
+  .brand span{color:var(--ink-soft)}
+
+  /* ---------- botoes ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--ink);color:var(--paper);text-decoration:none;
+    font-weight:600;font-size:.98rem;
+    padding:14px 24px;border-radius:999px;border:1.5px solid var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(20,20,20,.16)}
+  .btn.small{padding:9px 18px;font-size:.88rem}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--blush);border-color:var(--ink)}
+  .btn svg{width:18px;height:18px;flex:none}
+
+  /* ---------- hero ---------- */
+  .hero{padding:104px 0 88px;overflow:hidden;position:relative}
+  .hero h1{
+    font-size:clamp(2.1rem,5.6vw,3.8rem);
+    line-height:1.12;letter-spacing:.025em;
+    margin:18px 0 24px;max-width:18ch;
+  }
+  .hl{
+    background-image:linear-gradient(transparent 58%, var(--blush) 0);
+    background-repeat:no-repeat;background-size:100% 100%;
+  }
+  @keyframes swipe{from{background-size:0% 100%}to{background-size:100% 100%}}
+  .anim .hl{animation:swipe .9s cubic-bezier(.7,0,.3,1) .35s both}
+  .hero .lead{font-size:1.08rem;margin-bottom:32px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .cta-note{margin-top:18px;font-size:.92rem;color:var(--ink-soft)}
+
+  .tags{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:46px}
+  .tag{
+    font-weight:600;font-size:.86rem;letter-spacing:.04em;padding:4px 10px;border-radius:4px;
+    background:linear-gradient(transparent 12%, var(--blush-soft) 0);
+  }
+
+  /* ---------- servicos ---------- */
+  .head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:38px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{
+    background:#FFFFFF;border:1.5px solid var(--line);border-radius:var(--radius);
+    padding:30px 26px;display:flex;flex-direction:column;gap:14px;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,20,20,.08);border-color:var(--blush)}
+  .card h3{font-family:'Julius Sans One',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.08rem;letter-spacing:.06em}
+  .card .desc{color:var(--ink-soft);font-size:.95rem}
+  .check{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:8px}
+  .check li{display:flex;gap:11px;align-items:flex-start;font-size:.93rem}
+  .check li::before{
+    content:"✓";flex:none;width:20px;height:20px;border-radius:50%;
+    background:var(--blush);color:var(--ink);font-weight:700;font-size:.72rem;
+    display:inline-flex;align-items:center;justify-content:center;margin-top:3px;
+  }
+
+  /* ---------- calendario ---------- */
+  .agenda{background:var(--blush-soft);overflow:hidden}
+  .week{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}
+  .day{
+    background:#FFFFFF;border:1.5px solid var(--line);border-radius:14px;
+    padding:18px 16px 16px;position:relative;
+  }
+  .day::before{
+    content:"";position:absolute;top:-7px;left:18px;width:12px;height:12px;border-radius:50%;
+    background:var(--blush-soft);border:1.5px solid var(--line);
+  }
+  .day .dia{
+    font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);margin-bottom:8px;
+  }
+  .day h4{font-family:'Julius Sans One',sans-serif;font-weight:400;text-transform:uppercase;font-size:.92rem;letter-spacing:.04em;line-height:1.3;margin-bottom:6px}
+  .day p{font-size:.88rem;color:var(--ink-soft);line-height:1.5}
+  .day.destaque{background:var(--blush);border-color:#E9BFA4}
+  .day.destaque p{color:#6B5546}
+  .agenda .pos{margin-top:28px;max-width:62ch}
+
+  /* ---------- sobre ---------- */
+  .sobre-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+  .chips{display:flex;flex-direction:column;gap:12px}
+  .chip{
+    background:#FFFFFF;border:1.5px solid var(--line);border-radius:12px;
+    padding:14px 18px;font-weight:600;font-size:.92rem;
+    display:flex;align-items:center;gap:12px;
+  }
+  .chip span{flex:none;width:10px;height:10px;border-radius:50%;background:var(--blush)}
+  .sobre p + p{margin-top:14px}
+
+  /* ---------- contato ---------- */
+  .contato{background:var(--blush);overflow:hidden}
+  .contato-inner{display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+  .contato .lead{color:#5F4B3D}
+  .contato .label{color:#7A6353}
+  .alt-links{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:.95rem;font-weight:500}
+
+  footer{padding:30px 0;border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  footer .label{letter-spacing:.18em}
+
+  /* ---------- responsivo ---------- */
+  @media (max-width:900px){
+    .cards{grid-template-columns:1fr}
+    .week{
+      grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;
+      overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;
+      margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px;
+    }
+    .day{scroll-snap-align:start}
+    .sobre-grid{grid-template-columns:1fr;gap:30px}
+    .section{padding:66px 0}
+    .hero{padding:70px 0 60px}
+    .deco.lg{display:none}
+  }
+  @media (max-width:520px){
+    .week{grid-auto-columns:86%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .anim .hl{animation:none}
+    .btn,.card{transition:none}
+  }
+</style>
+</head>
+<body class="anim">
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#topo">Sthefany <span>Baron</span></a>
+    <a class="btn small" href="https://wa.me/5547997067891?text=Ol%C3%A1%2C%20Sthefany!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 1 1 16.1-3.8z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="deco lg" aria-hidden="true" style="top:-60px;right:-90px;width:420px" viewBox="0 0 400 400">
+      <path fill="#F9D9C5" d="M305,38 C372,68 402,152 376,228 C350,304 256,356 176,330 C96,304 58,214 90,138 C122,62 238,8 305,38 Z"/>
+      <path fill="none" stroke="#141414" stroke-width="2.5" d="M30,300 C90,236 196,228 262,278 C300,307 352,310 396,282"/>
+    </svg>
+    <svg class="deco" aria-hidden="true" style="top:84px;right:46%;width:110px;opacity:.9" viewBox="0 0 120 70">
+      <g fill="#141414">
+        <ellipse cx="8" cy="10" rx="2.2" ry="3.6" transform="rotate(-28 8 10)"/>
+        <ellipse cx="34" cy="6" rx="2.2" ry="3.6" transform="rotate(-28 34 6)"/>
+        <ellipse cx="60" cy="12" rx="2.2" ry="3.6" transform="rotate(-28 60 12)"/>
+        <ellipse cx="86" cy="7" rx="2.2" ry="3.6" transform="rotate(-28 86 7)"/>
+        <ellipse cx="20" cy="30" rx="2.2" ry="3.6" transform="rotate(-28 20 30)"/>
+        <ellipse cx="47" cy="27" rx="2.2" ry="3.6" transform="rotate(-28 47 27)"/>
+        <ellipse cx="73" cy="33" rx="2.2" ry="3.6" transform="rotate(-28 73 33)"/>
+        <ellipse cx="99" cy="28" rx="2.2" ry="3.6" transform="rotate(-28 99 28)"/>
+        <ellipse cx="10" cy="52" rx="2.2" ry="3.6" transform="rotate(-28 10 52)"/>
+        <ellipse cx="36" cy="49" rx="2.2" ry="3.6" transform="rotate(-28 36 49)"/>
+        <ellipse cx="62" cy="55" rx="2.2" ry="3.6" transform="rotate(-28 62 55)"/>
+        <ellipse cx="88" cy="50" rx="2.2" ry="3.6" transform="rotate(-28 88 50)"/>
+      </g>
+    </svg>
+    <svg class="deco lg" aria-hidden="true" style="bottom:-90px;left:-110px;width:380px" viewBox="0 0 420 300">
+      <path fill="#141414" d="M-40,215 C5,128 128,92 222,130 C316,168 366,248 306,300 L-40,300 Z"/>
+    </svg>
+
+    <div class="wrap">
+      <p class="label"><b>Consultoria de marketing</b> para pequenos negócios</p>
+      <h1 class="display">Presença digital, <span class="hl">sem complicação</span>.</h1>
+      <p class="lead">Ajudo pequenos negócios e profissionais liberais a se comunicar melhor, crescer nas redes e organizar processos digitais que funcionam de verdade, desde 2017.</p>
+      <div class="cta-row" style="margin-top:32px">
+        <a class="btn" href="https://wa.me/5547997067891?text=Ol%C3%A1%2C%20Sthefany!%20Vi%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 1 1 16.1-3.8z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="btn ghost" href="#servicos">Ver serviços</a>
+      </div>
+      <p class="cta-note">Orçamento sem compromisso: você fala direto comigo.</p>
+
+      <div class="tags" aria-label="Áreas de atuação">
+        <span class="tag">social media</span>
+        <span class="tag">calendário editorial</span>
+        <span class="tag">identidade de marca</span>
+        <span class="tag">edição de vídeo</span>
+        <span class="tag">copywriting</span>
+        <span class="tag">branding</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="section" id="servicos">
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <p class="label">Serviços</p>
+          <h2 class="h2 display">Como posso ajudar</h2>
+          <p class="lead">Três formatos, do pontual ao recorrente: você escolhe quanto quer delegar.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Consultoria</h3>
+          <p class="desc">Um diagnóstico completo do seu negócio para entender posicionamento, necessidades e oportunidades, e sair com um norte claro.</p>
+          <ul class="check">
+            <li>Mapeamento do negócio e do seu cliente ideal</li>
+            <li>Diagnóstico comercial: fluxo, posicionamento e oferta</li>
+            <li>Mapa de dores, oportunidades e próximos passos</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Mentoria</h3>
+          <p class="desc">Acompanhamento contínuo para você, ou sua equipe, tocar o conteúdo com autonomia e segurança.</p>
+          <ul class="check">
+            <li>Encontros recorrentes de orientação</li>
+            <li>Revisão do que está no ar</li>
+            <li>Ajustes de rota conforme os resultados</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Gestão parcial de conteúdo</h3>
+          <p class="desc">Eu planejo e estruturo, você publica com leveza. Para quem quer constância sem virar refém das redes.</p>
+          <ul class="check">
+            <li>Calendário editorial mensal</li>
+            <li>Roteiros, legendas e textos</li>
+            <li>Edição de vídeo: Reels, Shorts e TikTok</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDÁRIO -->
+  <section class="section agenda" id="metodo">
+    <svg class="deco lg" aria-hidden="true" style="top:-40px;right:-80px;width:300px;opacity:.9" viewBox="0 0 300 220">
+      <path fill="none" stroke="#141414" stroke-width="2.5" d="M10,170 C40,90 130,40 210,70 C260,89 290,140 286,196"/>
+    </svg>
+    <div class="wrap">
+      <div class="head-row">
+        <div>
+          <p class="label">Método</p>
+          <h2 class="h2 display">Sua semana de conteúdo, organizada</h2>
+          <p class="lead">Um exemplo do que um calendário editorial muda na prática: cada dia tem um porquê.</p>
+        </div>
+      </div>
+
+      <div class="week" aria-label="Exemplo de calendário editorial semanal">
+        <div class="day">
+          <p class="dia">Segunda</p>
+          <h4>Reel de bastidores</h4>
+          <p>Mostra o processo e gera proximidade com quem acompanha.</p>
+        </div>
+        <div class="day">
+          <p class="dia">Terça</p>
+          <h4>Post educativo</h4>
+          <p>Responde uma dúvida real do seu público e constrói autoridade.</p>
+        </div>
+        <div class="day">
+          <p class="dia">Quarta</p>
+          <h4>Story interativo</h4>
+          <p>Enquete ou caixinha: você escuta o público e alimenta os próximos posts.</p>
+        </div>
+        <div class="day">
+          <p class="dia">Quinta</p>
+          <h4>Prova social</h4>
+          <p>Depoimento, resultado ou antes e depois: confiança em construção.</p>
+        </div>
+        <div class="day destaque">
+          <p class="dia">Sexta</p>
+          <h4>Convite leve</h4>
+          <p>Uma oferta clara, sem pressão: o caminho para quem já está pronto.</p>
+        </div>
+      </div>
+
+      <p class="pos lead">Resultado: você sabe <strong>o que</strong> postar, <strong>por que</strong> postar e <strong>quando</strong> postar, sem inventar conteúdo na correria do dia.</p>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section" id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="sobre">
+        <p class="label">Sobre</p>
+        <h2 class="h2 display">Oi, eu sou a Sthefany</h2>
+        <p>Sou formada em Marketing pela UniCesumar e trabalho desde 2017 com social media, design e edição de vídeo, sempre ao lado de pequenos negócios e profissionais liberais que precisam de comunicação clara, não de fórmulas mirabolantes.</p>
+        <p>Depois de um período dedicado à maternidade, retomei meus projetos com foco em consultoria, mentoria e criação estratégica. A ideia continua a mesma: identidade de marca leve e funcional, processos simples e conteúdo que o dono do negócio consegue sustentar no dia a dia.</p>
+      </div>
+      <div class="chips" aria-label="Resumo">
+        <div class="chip"><span></span>8+ anos de experiência, desde 2017</div>
+        <div class="chip"><span></span>Formação em Marketing | UniCesumar</div>
+        <div class="chip"><span></span>Atendimento on-line para todo o Brasil</div>
+        <div class="chip"><span></span>Copywriting | Branding | Planejamento</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section contato" id="contato">
+    <svg class="deco lg" aria-hidden="true" style="bottom:-80px;right:-70px;width:320px" viewBox="0 0 420 300">
+      <path fill="#141414" d="M120,300 C108,222 168,150 256,142 C344,134 416,188 420,262 L420,300 Z"/>
+    </svg>
+    <svg class="deco" aria-hidden="true" style="top:36px;left:60%;width:100px;opacity:.85" viewBox="0 0 120 70">
+      <g fill="#141414">
+        <ellipse cx="8" cy="10" rx="2.2" ry="3.6" transform="rotate(-28 8 10)"/>
+        <ellipse cx="34" cy="6" rx="2.2" ry="3.6" transform="rotate(-28 34 6)"/>
+        <ellipse cx="60" cy="12" rx="2.2" ry="3.6" transform="rotate(-28 60 12)"/>
+        <ellipse cx="20" cy="30" rx="2.2" ry="3.6" transform="rotate(-28 20 30)"/>
+        <ellipse cx="47" cy="27" rx="2.2" ry="3.6" transform="rotate(-28 47 27)"/>
+        <ellipse cx="73" cy="33" rx="2.2" ry="3.6" transform="rotate(-28 73 33)"/>
+      </g>
+    </svg>
+    <div class="wrap contato-inner">
+      <p class="label">Contato</p>
+      <h2 class="h2 display">Qual o próximo passo?</h2>
+      <p class="lead">Me chame no WhatsApp para tirar dúvidas ou pedir um orçamento. Você fala direto comigo e a conversa não tem compromisso.</p>
+      <a class="btn" href="https://wa.me/5547997067891?text=Ol%C3%A1%2C%20Sthefany!%20Vi%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 1 1 16.1-3.8z"/></svg>
+        (47) 99706-7891 | Chamar agora
+      </a>
+      <div class="alt-links">
+        <a href="mailto:sthefanybds@hotmail.com">sthefanybds@hotmail.com</a>
+        <a href="https://www.linkedin.com/in/sthefany-baron-pires-77b97a405/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label"><b>Sthefany Baron</b> | <span id="ano">2026</span></span>
+    <span class="label">Consultoria de marketing | Conteúdo estratégico</span>
+  </div>
+</footer>
+
+<script>document.getElementById('ano').textContent = new Date().getFullYear();</script>
+</body>
+</html>
