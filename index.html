@@ -176,10 +176,16 @@
     .sobre-grid{grid-template-columns:1fr;gap:30px}
     .section{padding:66px 0}
     .hero{padding:70px 0 60px}
-    .deco.lg{display:none}
+    .deco{display:none}
   }
   @media (max-width:520px){
     .week{grid-auto-columns:86%}
+    .brand{font-size:.88rem;letter-spacing:.1em}
+    .hero h1{font-size:clamp(1.9rem,8.5vw,2.4rem)}
+    .cta-row{flex-direction:column;align-items:stretch;width:100%}
+    .cta-row .btn{justify-content:center}
+    .contato .btn{width:100%;justify-content:center}
+    footer .wrap{flex-direction:column;gap:6px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -207,22 +213,6 @@
     <svg class="deco lg" aria-hidden="true" style="top:-60px;right:-90px;width:420px" viewBox="0 0 400 400">
       <path fill="#F9D9C5" d="M305,38 C372,68 402,152 376,228 C350,304 256,356 176,330 C96,304 58,214 90,138 C122,62 238,8 305,38 Z"/>
       <path fill="none" stroke="#141414" stroke-width="2.5" d="M30,300 C90,236 196,228 262,278 C300,307 352,310 396,282"/>
-    </svg>
-    <svg class="deco" aria-hidden="true" style="top:84px;right:46%;width:110px;opacity:.9" viewBox="0 0 120 70">
-      <g fill="#141414">
-        <ellipse cx="8" cy="10" rx="2.2" ry="3.6" transform="rotate(-28 8 10)"/>
-        <ellipse cx="34" cy="6" rx="2.2" ry="3.6" transform="rotate(-28 34 6)"/>
-        <ellipse cx="60" cy="12" rx="2.2" ry="3.6" transform="rotate(-28 60 12)"/>
-        <ellipse cx="86" cy="7" rx="2.2" ry="3.6" transform="rotate(-28 86 7)"/>
-        <ellipse cx="20" cy="30" rx="2.2" ry="3.6" transform="rotate(-28 20 30)"/>
-        <ellipse cx="47" cy="27" rx="2.2" ry="3.6" transform="rotate(-28 47 27)"/>
-        <ellipse cx="73" cy="33" rx="2.2" ry="3.6" transform="rotate(-28 73 33)"/>
-        <ellipse cx="99" cy="28" rx="2.2" ry="3.6" transform="rotate(-28 99 28)"/>
-        <ellipse cx="10" cy="52" rx="2.2" ry="3.6" transform="rotate(-28 10 52)"/>
-        <ellipse cx="36" cy="49" rx="2.2" ry="3.6" transform="rotate(-28 36 49)"/>
-        <ellipse cx="62" cy="55" rx="2.2" ry="3.6" transform="rotate(-28 62 55)"/>
-        <ellipse cx="88" cy="50" rx="2.2" ry="3.6" transform="rotate(-28 88 50)"/>
-      </g>
     </svg>
     <svg class="deco lg" aria-hidden="true" style="bottom:-90px;left:-110px;width:380px" viewBox="0 0 420 300">
       <path fill="#141414" d="M-40,215 C5,128 128,92 222,130 C316,168 366,248 306,300 L-40,300 Z"/>
